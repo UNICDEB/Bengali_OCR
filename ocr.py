@@ -139,4 +139,4 @@ def ocr_count(filename):
 
 
 
-print(ocr_core('test1.png'))
+# print(ocr_core('test1.png'))
