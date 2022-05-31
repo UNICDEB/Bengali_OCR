@@ -1,10 +1,10 @@
-from flask import request
+
 
 try:
     from PIL import Image
-    import cv2
+   
 except ImportError:
-    import cv2
+    
     import Image
 import pytesseract
 
@@ -93,18 +93,7 @@ def ocr_count(filename):
 
     return freq
 
-def ocr_search(filename):
-    pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
-    custom_config = r'--oem 3 --psm 6'
 
-    img_info = pytesseract.image_to_data(Image.open(filename), output_type=pytesseract.Output.DICT, config=custom_config,lang='ben')
-    val= request.args.get('value')
-    # val = {% value %}
-    x = img_info['text'].count(val)
-    if x > 0:
-        print(f"\nThe {val} is in the file and {val} is available in the list {x} times.")
-    else:
-        print(f"{val} is not available in the file")
 
 # def ocr_search(filename):
 #     pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
