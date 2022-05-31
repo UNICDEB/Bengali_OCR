@@ -2,11 +2,7 @@ Click==7.0
 Flask~=2.1.2
 gunicorn==20.0.2
 itsdangerous==1.1.0
-Jinja2==2.10.3
 MarkupSafe==1.1.1
 Pillow~=9.1.0
 pytesseract~=0.3.9
 Werkzeug==0.16.0
-
-opencv-python~=4.5.5.64
-prettytable~=3.3.0
