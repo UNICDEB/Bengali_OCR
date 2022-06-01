@@ -60,8 +60,6 @@ def upload_page():
             word_freq  = ocr_freq(file)
             extracted_text = ocr_core(file)
             word_count = ocr_count(file)
-            # for tst purposes
-            # tst = oct_cmt(file)
 
             # extract the text and display it
             return render_template('upload.html',
