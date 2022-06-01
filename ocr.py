@@ -37,16 +37,6 @@ def ocr_core(filename):
     file = open('data/image_result.txt', 'w', encoding='utf-8')
     file.write(data)
 
-
-    # CHECK THE VALUE IF IT IS AVAILABLE IN THE FILE OR NOT, IF AVAILABLE THEN HOW MANY TIMES
-    #
-    # val = input("Enter the finding word :- ")
-    # x = img_info['text'].count(val)
-    # if x > 0:
-    #     print(f"\nThe {val} is in the file and {val} is available in the list {x} times.")
-    # else:
-    #     print(f"{val} is not available in the file")
-
     text = pytesseract.image_to_string(Image.open(filename) , config=custom_config, lang='ben')
     # text = pytesseract.image_to_string(Image.open(filename), output_type=pytesseract.Output.DICT, config=custom_config, lang='ben')
 
@@ -82,8 +72,6 @@ def ocr_count(filename):
 
     data = parse(img_info['text'])
 
-    # from collections import Counter
-    # freq = Counter(data.split()).most_common()
 
     my_list = []
     my_list = data.split()
